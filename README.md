@@ -17,7 +17,7 @@
 
 
 # Practical-2
-# Problem covered
+## Problem covered
 1.Data Type:
 Cross-sectional data (instructors at one time, not over time)
 
@@ -36,7 +36,7 @@ Approximately normal, slightly skewed toward lower beauty values
 6️ Tenure by Gender:
  If the male tenure percentage is higher, then yes — tenure status differs by gender
 
- # Tech Stack
+ ## Tech Stack
  
 Python -	Programming language
 
@@ -51,7 +51,7 @@ Jupyter Notebook - To run code interactively
 
 # Practical-3
 
-# Problem Covered
+## Problem Covered
 1 Duplicates & Age Statistics
 
 Duplicates: Exist because a professor can teach multiple courses.
@@ -84,7 +84,7 @@ Male and female instructors overlap heavily; gender does not strongly affect eva
 
 No major impact of tenure or gender on teaching evaluation scores; scores are fairly evenly distributed across groups.
 
-# Tech Stack
+## Tech Stack
 Python 3.x-	Programming language
 
 pandas	-Data handling, filtering, aggregation
