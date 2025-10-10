@@ -1,4 +1,4 @@
-# CSU1658 Practical – Statistical Foundation of Data Sciences
+# CSU1658 Practical 1 – Statistical Foundation of Data Sciences
 
 ## Problems Covered
 1. Mean, Median & Age-Weighted Mean of Income  
