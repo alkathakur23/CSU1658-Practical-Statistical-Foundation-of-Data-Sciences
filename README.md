@@ -1,4 +1,6 @@
-# CSU1658 Practical 1 – Statistical Foundation of Data Sciences
+#   Statistical Foundation of Data Sciences CSU1658
+
+# Practical 1
 
 ## Problems Covered
 1. Mean, Median & Age-Weighted Mean of Income  
@@ -11,6 +13,7 @@
 - NumPy  
 - Pandas  
 - SciPy  
+
 
 
 # Practical-2
@@ -44,3 +47,51 @@ numpy-	For numerical calculations
 matplotlib / seaborn-	For plotting histograms & charts
 
 Jupyter Notebook - To run code interactively
+
+
+# Practical-3
+
+# Problem Covered
+1 Duplicates & Age Statistics
+
+Duplicates: Exist because a professor can teach multiple courses.
+
+All observations:
+
+Average age ≈ 48.3 years
+
+Standard deviation ≈ 10.3
+
+Filtered dataset (one observation per professor, n=94):
+
+Average age ≈ 48.5 years
+
+Standard deviation ≈ 9.9
+
+2️ Lower vs Upper Division Evaluations (Bar Chart)
+
+Lower division instructors receive slightly higher average teaching evaluations than upper division instructors.
+
+3️ Relationship between Age and Teaching Evaluation
+
+Scatter plot shows no strong correlation; evaluation scores are fairly consistent across ages.
+
+4️ Gender-Differentiated Scatter Plot (Age vs Evaluation)
+
+Male and female instructors overlap heavily; gender does not strongly affect evaluations.
+
+5️ Scatter Plot Differentiated by Gender & Tenure
+
+No major impact of tenure or gender on teaching evaluation scores; scores are fairly evenly distributed across groups.
+
+# Tech Stack
+Python 3.x-	Programming language
+
+pandas	-Data handling, filtering, aggregation
+
+numpy	-Statistical calculations (mean, standard deviation)
+
+matplotlib / seaborn-	Visualization (bar charts, scatter plots)
+
+Jupyter Notebook - Interactive analysis environment
+
