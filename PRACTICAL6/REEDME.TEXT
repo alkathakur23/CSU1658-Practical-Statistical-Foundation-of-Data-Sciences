@@ -1,1 +1,109 @@
+#TECH STACK
 
+Tool / Library	-Purpose
+Python   -	Programming language used for analysis
+Pandas	-Data handling and manipulation
+NumPy	-Numerical calculations
+SciPy (scipy.stats)	-Performing statistical tests (t-test, ANOVA, chi-square, correlation)
+Matplotlib / Seaborn	-Data visualization (boxplots, scatterplots, etc.)
+Jupyter Notebook / Google Colab / VS Code	-Interactive coding and visualization environment
+
+
+#1️) T-TEST
+## Problem Statement:
+
+Using the Teachers’ Rating dataset, determine whether gender affects teaching evaluation scores.
+
+## Objective:
+
+To compare the mean evaluation scores of male and female instructors.
+
+ ##Hypotheses:
+
+H₀: Mean evaluation scores for males and females are equal.
+
+H₁: Mean evaluation scores for males and females are different.
+
+ ##Test Used:
+
+Independent Samples T-Test (scipy.stats.ttest_ind)
+
+ ##Output Interpretation:
+
+If p < 0.05, then gender significantly affects teaching evaluation ratings.
+
+
+#2️) ANOVA TEST
+## Problem Statement:
+
+Using the Teachers’ Rating dataset, determine whether beauty scores of instructors differ by age group.
+
+## Objective:
+
+To test if the mean beauty score is significantly different across multiple age groups (e.g., Young, Middle, Old).
+
+## Hypotheses:
+
+H₀: All age groups have equal mean beauty scores.
+
+H₁: At least one age group has a different mean beauty score.
+
+## Test Used:
+
+One-Way ANOVA (scipy.stats.f_oneway)
+
+## Output Interpretation:
+
+If p < 0.05, then beauty scores significantly differ among age groups.
+
+ #3️) CHI-SQUARE TEST
+## Problem Statement:
+
+Using the Teachers’ Rating dataset, test whether there is an association between tenure and gender.
+
+## Objective:
+
+To see if being tenured (Yes/No) is related to gender (Male/Female).
+
+## Hypotheses:
+
+H₀: Gender and tenure are independent (no relationship).
+
+H₁: Gender and tenure are associated.
+
+## Test Used:
+
+Chi-Square Test of Independence (scipy.stats.chi2_contingency)
+
+## Output Interpretation:
+
+If p < 0.05, then tenure and gender have a significant association.
+
+# 4️)CORRELATION ANALYSIS
+## Problem Statement:
+
+Using the Teachers’ Rating dataset, determine whether teaching evaluation scores are correlated with beauty scores.
+
+## Objective:
+
+To measure the strength and direction of the linear relationship between evaluation and beauty scores.
+
+## Hypotheses:
+
+H₀: There is no correlation between evaluation and beauty.
+
+H₁: There is a correlation between evaluation and beauty.
+
+## Test Used:
+
+Pearson Correlation Coefficient (scipy.stats.pearsonr)
+
+## Output Interpretation:
+
+r > 0: Positive correlation (as beauty ↑, evaluation ↑)
+
+r < 0: Negative correlation
+
+|r| close to 1: Strong correlation
+
+p < 0.05: Correlation is statistically significant
