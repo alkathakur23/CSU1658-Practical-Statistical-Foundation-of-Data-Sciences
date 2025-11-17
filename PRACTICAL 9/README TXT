@@ -1,1 +1,67 @@
+Workflow-
+Step 1: Exploratory Data Analysis (EDA)
+Objective: Understand the dataset structure, summary statistics, and class distribution.
+Tasks:
+	Load the Iris dataset
+	Display the first few rows using head()
+	Generate statistical summary using describe()
+	Group the data by species using groupby() to compare means of each feature across classes.
+
+
+Step 2: Feature Scaling
+Objective: Bring all numerical features to the same scale so that no feature dominates distance calculations.
+Tasks:
+	Use StandardScaler to normalize numerical columns.
+	Convert features into standardized form
+z=(x-μ)/σ
+Step 3: Train–Test Split & Model Training
+Objective: Train the KNN model using training data.
+Tasks:
+	Split data using train_test_split() (typically 70% train, 30% test).
+	Define KNN classifier with initial K=5
+	Fit the classifier on training data.
+
+Step 4: Confusion Matrix & Accuracy
+Objective: Evaluate the classifier.
+Tasks:
+	Predict the test values using the trained model.
+	Generate Confusion Matrix.
+	Calculate Accuracy Score.
+Step 5: Classification Report
+Objective: Get a detailed performance summary.
+Tasks:
+	Create a classification_report including:
+Precision
+ Recall
+ F1-score
+ Support (number of samples per class)
+
+Step 6: Compare Error Rates for Different K
+Objective: Find how the number of neighbors (K) affects model performance.
+Tasks:
+	Iterate K from 1 to 20.
+	Train a model for each K.
+	Measure error rate = (wrong predictions / total predictions).
+	Store error values for each K.
+
+Step 7: Plot Error Rate vs K
+Objective: Visually identify the best K.
+Tasks:
+	Plot line graph with
+	X-axis → K values
+	Y-axis → Error rate
+	Look for the K where error rate is minimum.
+
+Step 8: Finding the Best K
+Objective: Choose the optimum K value for the final model.
+Tasks:
+	Identify minimum-error K from the plot.
+	Re-train KNN using best K.
+
+Step 9: Visualize Test Results
+Objective: Graphically show how KNN classified test samples.
+Tasks:
+	Choose two features (e.g., sepal length & width).
+	Plot a scatter plot of test data with predicted class colors.
+	Helps visualize decision-making of KNN.
 
