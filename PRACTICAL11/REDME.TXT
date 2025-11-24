@@ -1,1 +1,71 @@
+##Workflow-
+Step 1 — Load and Prepare the Data
+	Import the monthly sunspot dataset (1749–2018).
+	Remove missing or invalid values.
+	Create a time index in months (or convert to year values).
+	Extract the column containing the monthly mean sunspot number.
+
+Step 2 — Plot the Time Series
+	Plot the monthly sunspot numbers against time.
+	Observe periodic waves (~11-year solar cycle).
+	Check visually for long-term trends or unusual spikes.
+
+Step 3 — Histogram of Sunspot Values
+	Create a histogram of all sunspot values.
+	Inspect right-skewness (Gamma-like behavior).
+	This motivates using the Gamma distribution for modeling.
+
+Step 4 — Segment Data into 12-Year Cycles
+	A solar cycle ≈ 11 years, but you reset the model every 12 years.
+	Compute the number of months per cycle:
+144 months = 12 × 12
+	Split the full dataset into consecutive 144-month blocks.
+	Treat each block as a separate realization of the Gamma process.
+
+Step 5 — Fit Gamma Model (Cycle-wise MLE)
+For each 12-year cycle:
+	Fit a Gamma distribution:
+	Shape parameter a
+	Scale parameter b
+	Use maximum likelihood estimation (MLE).
+	Store and compare (a,b)values across cycles.
+	Observe whether different cycles show similar shapes or scales.
+
+Step 6 — MCMC Modeling (Bayesian Estimation)
+You run MCMC for:
+	First 50 observations
+	All observations
+	Last 50 observations
+The workflow is:
+	Choose priors for shape aand scale b(center around a=4,b=10).
+	Set up a Gamma likelihood for the observed sunspot numbers.
+	Run MCMC:
+	Draw many samples of aand b
+	Include a “burn-in” tuning phase to stabilize chains.
+	Store the posterior samples of aand b.
+
+Step 7 — Trace Plots & Posterior Histograms
+For each dataset (first50, all, last50):
+	Plot MCMC traces of parameters aand b:
+	Check mixing
+	Check convergence
+	Discard burn-in (first ~500 samples).
+	Plot posterior histograms of parameters.
+	Summarize posterior means, medians, 95% credible intervals.
+
+Step 8 — Posterior Predictive Checks
+	Use posterior samples of aand bto simulate future sunspot values.
+	Compare:
+	Empirical histogram of observed data
+	Histogram of posterior predictive data
+	Assess how well the Gamma model fits the sunspot distribution.
+
+Step 9 — Interpretation
+	Inspect how aand bchange across cycles.
+	Higher a⋅b= higher average sunspot activity.
+	Posterior predictive distributions show model uncertainty.
+	MCMC summaries provide inference on:
+	The underlying solar cycle intensity
+	Variability from cycle to cycle
+
 
